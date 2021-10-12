@@ -1,0 +1,236 @@
+<html>
+<body>
+<h1>Data Analysis</h1>
+
+<h2>Dataset analysis</h2>
+
+<ul>
+	<li>1001 rows</li>
+	<li>30 attributes</li>
+</ul>
+
+<b>Attribute description:</b>
+<style type="text/css">
+    .tg  {border:none;border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+    .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+      font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+      font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-grbq{background-color:#313131;color:#ffffff;text-align:left;vertical-align:top}
+    .tg .tg-buh4{background-color:#f9f9f9;text-align:left;vertical-align:top}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-grbq">Column</th>
+        <th class="tg-grbq">Type</th>
+        <th class="tg-grbq">Comments/Range (rounded)</th>
+        <th class="tg-grbq">Problems</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-buh4">ID-EVENTO</td>
+        <td class="tg-buh4">int</td>
+        <td class="tg-buh4">Unique<br>Not empty values<br>10,200,000 - 11,500,000</td>
+        <td class="tg-buh4"></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">TITULO</td>
+        <td class="tg-0lax">string</td>
+        <td class="tg-0lax">Not unique<br>Not empty values<br></td>
+        <td class="tg-0lax">The strings has not clear format</td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">PRECIO</td>
+        <td class="tg-buh4">string</td>
+        <td class="tg-buh4">Not unique<br>Empty values</td>
+        <td class="tg-buh4">There are pleanty of missing values<br>The type should be int but string has no clear format</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">GRATUITO</td>
+        <td class="tg-0lax">int</td>
+        <td class="tg-0lax">0 --&gt; False<br>1 --&gt; True<br>Not unique<br>Not empty values</td>
+        <td class="tg-0lax"></td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">LARGA-DURACION</td>
+        <td class="tg-buh4">int</td>
+        <td class="tg-buh4">0 --&gt; False<br>1 --&gt; True<br>Not unique<br>Not empty value</td>
+        <td class="tg-buh4"></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">DIAS-SEMANA</td>
+        <td class="tg-0lax">string</td>
+        <td class="tg-0lax">Not unique<br>Empty values</td>
+        <td class="tg-0lax">List (as string) that indicates the week days where the show is performed</td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">DIAS-EXLUSIVOS</td>
+        <td class="tg-buh4">string</td>
+        <td class="tg-buh4">Not unique<br>Empty values</td>
+        <td class="tg-buh4">List (as string) of dates</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">FECHA</td>
+        <td class="tg-0lax">date</td>
+        <td class="tg-0lax">Not unique<br>Not empty values<br>Range: January 2022 - February 2018</td>
+        <td class="tg-0lax"></td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">FECHA-FIN</td>
+        <td class="tg-buh4">date</td>
+        <td class="tg-buh4">Not unique<br>Not empty values<br>Range: January 2022 - February 2018</td>
+        <td class="tg-buh4">The hour is always 23:59</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">HORA</td>
+        <td class="tg-0lax">date</td>
+        <td class="tg-0lax">Not unique<br>Empty values<br></td>
+        <td class="tg-0lax">24 hour format</td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">DESCRIPTION</td>
+        <td class="tg-buh4">string</td>
+        <td class="tg-buh4">Not unique<br>Empty values</td>
+        <td class="tg-buh4">Raw text</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">CONTENT-URL</td>
+        <td class="tg-0lax">string</td>
+        <td class="tg-0lax">Not unique<br>Not empty values</td>
+        <td class="tg-0lax">url which locates the source</td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">TITULO-ACTIVIDAD</td>
+        <td class="tg-buh4">string</td>
+        <td class="tg-buh4">Not unique<br>Empty values</td>
+        <td class="tg-buh4"></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">URL-ACTIVIDAD</td>
+        <td class="tg-0lax">string</td>
+        <td class="tg-0lax">Not unique<br>Empty value</td>
+        <td class="tg-0lax">url that locates "ACTIVIDAD"</td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">URL-INSTALACION</td>
+        <td class="tg-buh4">string</td>
+        <td class="tg-buh4">Not unique<br>Empty value</td>
+        <td class="tg-buh4">url that locates "INSTALACION"</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">NOMBRE-INSTALACION</td>
+        <td class="tg-0lax">string</td>
+        <td class="tg-0lax">Not unique<br>Empty value</td>
+        <td class="tg-0lax">Location where the event takes place</td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">ACCESIBILIDAD.INSTALACION</td>
+        <td class="tg-buh4">double</td>
+        <td class="tg-buh4">Not unique<br>Empty values</td>
+        <td class="tg-buh4">Values found: 0,1, "1,6", 2. What models those numbers is unknown</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">CLASE-VIAL-INSTALACION</td>
+        <td class="tg-0lax">string</td>
+        <td class="tg-0lax">Not unique <br>Empty values</td>
+        <td class="tg-0lax">Values: CALLE, PLAZA, AVENIDA, PASEO</td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">NOMBRE-VIA-INSTALACION</td>
+        <td class="tg-buh4">string</td>
+        <td class="tg-buh4">Not unique<br>Empty value</td>
+        <td class="tg-buh4">Name which correspond of the street</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">NUM-INSTALACION</td>
+        <td class="tg-0lax">int</td>
+        <td class="tg-0lax">Not unique<br>Empty value</td>
+        <td class="tg-0lax">Nº where the show was carried out</td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">DISTRITO-INSTALACION</td>
+        <td class="tg-buh4">string</td>
+        <td class="tg-buh4">Not unique<br>Empty value</td>
+        <td class="tg-buh4"></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">BARRIO-INSTALACION</td>
+        <td class="tg-0lax">string</td>
+        <td class="tg-0lax">Not unique<br>Empty value</td>
+        <td class="tg-0lax"></td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">CODIGO-POSTAL-INSTALACION</td>
+        <td class="tg-buh4">int</td>
+        <td class="tg-buh4">Not unique<br>Empty value</td>
+        <td class="tg-buh4"></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">COORDENADA-X</td>
+        <td class="tg-0lax">int</td>
+        <td class="tg-0lax">Not unique<br>Empty value</td>
+        <td class="tg-0lax"></td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">COORDENADA-Y </td>
+        <td class="tg-buh4">int</td>
+        <td class="tg-buh4">Not unique<br>Empty value</td>
+        <td class="tg-buh4"></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">LATITUD</td>
+        <td class="tg-0lax">double</td>
+        <td class="tg-0lax">Not unique<br>Empty value</td>
+        <td class="tg-0lax"></td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">LONGITUD</td>
+        <td class="tg-buh4">double</td>
+        <td class="tg-buh4">Not unique<br>Empty value</td>
+        <td class="tg-buh4"></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">TIPO</td>
+        <td class="tg-0lax">string</td>
+        <td class="tg-0lax">Not unique<br>Empty value</td>
+        <td class="tg-0lax">format: /contenido/actividades/{the activity itself}</td>
+      </tr>
+      <tr>
+        <td class="tg-buh4">AUDIENCIA</td>
+        <td class="tg-buh4">string</td>
+        <td class="tg-buh4">Not unique<br>Empty value</td>
+        <td class="tg-buh4">format: /usuario/{kind}<br><br>Many kind of users are allowed</td>
+      </tr>
+    </tbody>
+    </table>
+
+
+<h2>Licensing of the Data Source Analysis</h2>
+
+TODO
+
+
+<h2>Resource Naming Strategy</h2>
+<ul>
+  <li><b>Domain:</b> http://www.group12.org/ </li>
+  <ul>
+  	<li><b>Path:</b> madrid_events/ </li>
+  	<ul>
+  		<li><b>Ontology:</b> ontology/ </li>
+  		<ul>
+  			<li><b>Class:</b> [ClassName] </li>
+  			<li><b>Property:</b> [PropertyName] </li>
+  		</ul>
+  		<li><b>Data:</b> resource/ </li>
+  		<ul>
+  			<li><b>Individual:</b> [ClassName]/[Identifier] </li>
+  		</ul>
+  	</ul>
+  </ul>
+</ul>
+
+</body>
+</html>
