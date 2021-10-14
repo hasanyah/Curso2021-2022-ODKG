@@ -1,28 +1,29 @@
-@prefix : <http://www.group12.org/madrid_events/ontology/> .
+@prefix : <https://data.eventsatmadrid.org/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.group12.org/madrid_events/ontology/> .
+@base <https://data.eventsatmadrid.org/ontology/> .
 
-<http://www.group12.org/madrid_events/ontology/> rdf:type owl:Ontology .
+
+<https://data.eventsatmadrid.org/ontology/> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.group12.org/madrid_events/ontology/hasAccessibility
+###  https://data.eventsatmadrid.org/ontology/hasAccessibility
 :hasAccessibility rdf:type owl:ObjectProperty ;
                   rdfs:domain :Installation .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasAddress
+###  https://data.eventsatmadrid.org/ontology/hasAddress
 :hasAddress rdf:type owl:ObjectProperty ;
             rdfs:domain :Installation .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasCoordinates
+###  https://data.eventsatmadrid.org/ontology/hasCoordinates
 :hasCoordinates rdf:type owl:ObjectProperty ;
                 rdfs:domain :Installation ;
                 rdfs:range [ rdf:type owl:Restriction ;
@@ -31,33 +32,33 @@
                            ] .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasDate
+###  https://data.eventsatmadrid.org/ontology/hasDate
 :hasDate rdf:type owl:ObjectProperty ;
          rdfs:domain :Event .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasDays
+###  https://data.eventsatmadrid.org/ontology/hasDays
 :hasDays rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :Event .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasDescription
+###  https://data.eventsatmadrid.org/ontology/hasDescription
 :hasDescription rdf:type owl:ObjectProperty ;
                 rdfs:domain :Event .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasHour
+###  https://data.eventsatmadrid.org/ontology/hasHour
 :hasHour rdf:type owl:ObjectProperty ;
          rdfs:domain :Event .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasLongDuration
+###  https://data.eventsatmadrid.org/ontology/hasLongDuration
 :hasLongDuration rdf:type owl:ObjectProperty ;
                  rdfs:domain :Event .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasName
+###  https://data.eventsatmadrid.org/ontology/hasName
 :hasName rdf:type owl:ObjectProperty ;
          rdfs:domain :District ,
                      :Installation ;
@@ -67,22 +68,22 @@
                     ] .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasNeighborhood
+###  https://data.eventsatmadrid.org/ontology/hasNeighborhood
 :hasNeighborhood rdf:type owl:ObjectProperty ;
                  rdfs:domain :District .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasPostalCode
+###  https://data.eventsatmadrid.org/ontology/hasPostalCode
 :hasPostalCode rdf:type owl:ObjectProperty ;
                rdfs:domain :District .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasPrice
+###  https://data.eventsatmadrid.org/ontology/hasPrice
 :hasPrice rdf:type owl:ObjectProperty ;
           rdfs:domain :Event .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasTitle
+###  https://data.eventsatmadrid.org/ontology/hasTitle
 :hasTitle rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           rdfs:domain :Event ;
@@ -92,13 +93,13 @@
                      ] .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasType
+###  https://data.eventsatmadrid.org/ontology/hasType
 :hasType rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :Event .
 
 
-###  http://www.group12.org/madrid_events/ontology/hasURL
+###  https://data.eventsatmadrid.org/ontology/hasURL
 :hasURL rdf:type owl:ObjectProperty ;
         rdfs:domain :Event ,
                     :Installation .
@@ -108,23 +109,23 @@
 #    Data properties
 #################################################################
 
-###  http://www.group12.org/madrid_events/ontology/coordinateX
+###  https://data.eventsatmadrid.org/ontology/coordinateX
 :coordinateX rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:float .
 
 
-###  http://www.group12.org/madrid_events/ontology/coordinateY
+###  https://data.eventsatmadrid.org/ontology/coordinateY
 :coordinateY rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:float .
 
 
-###  http://www.group12.org/madrid_events/ontology/districtName
+###  https://data.eventsatmadrid.org/ontology/districtName
 :districtName rdf:type owl:DatatypeProperty ;
               rdfs:domain :District ;
               rdfs:range xsd:string .
 
 
-###  http://www.group12.org/madrid_events/ontology/eventTitle
+###  https://data.eventsatmadrid.org/ontology/eventTitle
 :eventTitle rdf:type owl:DatatypeProperty ;
             rdfs:domain :Event ;
             rdfs:range xsd:string .
@@ -134,15 +135,15 @@
 #    Classes
 #################################################################
 
-###  http://www.group12.org/madrid_events/ontology/District
+###  https://data.eventsatmadrid.org/ontology/District
 :District rdf:type owl:Class .
 
 
-###  http://www.group12.org/madrid_events/ontology/Event
+###  https://data.eventsatmadrid.org/ontology/Event
 :Event rdf:type owl:Class .
 
 
-###  http://www.group12.org/madrid_events/ontology/Installation
+###  https://data.eventsatmadrid.org/ontology/Installation
 :Installation rdf:type owl:Class .
 
 
