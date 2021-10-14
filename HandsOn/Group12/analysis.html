@@ -281,29 +281,25 @@
     To that end, let us first have a look to the generic syntax of a URI:
     <br>
     URI = scheme:[//authority]path[?query] [#fragment]
-    <br>
+    <br><br>
     Now, let us define the domain on which our data will be located.
-    <br>
+    <br><br>
     <b>SCHEME:</b> Arguably the most popular schemes are http and https. Although there are alternatives like ftp, data,
-    irc,
-    we are sticking with the https scheme, which is the one that fits best our needs.
-    <br>
+    irc. We are sticking with the https scheme, which is the one that fits best our needs.
+    <br><br>
     <b>AUTHORITY:</b> The authority component can be further subdivided into three subcomponents
+    <li>authority = [userinfo@]host[:port]</li>
     <br>
-    authority = [userinfo@]host[:port]
-    <br>
-    We will only be using the host subcomponent. We propose the host "data.eventsatmadrid.org", in which our ontology
-    will be published. It is worth noting that "eventsatmadrid.org" it is an unregistered domain. Thus, the domain that
-    we will be using can be formulated as:
-    <br>
-    <b>https://data.eventsatmadrid.org/</b>
+    We eschew the use of the userinfo and port subcomponents. The host we propose is <b>"data.eventsatmadrid.org"</b>, in which our ontologies will be published. It is worth noting that "eventsatmadrid.org" is an unregistered domain. 
+    <br><br>
+    Thus, the domain that we will be using can be formulated as: <b>https://data.eventsatmadrid.org/</b>
   </p>
   <p>
     Now that we have defined the domain in which the ontology will be located, let us define the paths and patterns for
     ontology classes, properties in the ontology and individuals.
   </p>
   <li><b>Definition of ontologies:</b> ontologies will be defined with the following pattern, where [ontologyName] is
-    the name of the ontology. [...]/ontology/[ontologyName] </li>
+    the name of the ontology. [...]/ontology/<b>[ontologyName]</b></li>
   <ul>
     <li>Example: https://data.eventsatmadrid.org/ontology/TouristAttraction</li>
   </ul>
@@ -338,7 +334,6 @@
     </ul>
   </ul>
   </ul>
-
 </body>
 
 </html>
